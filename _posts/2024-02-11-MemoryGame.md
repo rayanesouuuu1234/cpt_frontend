@@ -1,5 +1,5 @@
-
-<html lang="en"><head>
+<html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Emoji Memory Game</title>
@@ -29,7 +29,7 @@
 <div id="game" class="grid"></div>
 
 <script>
-const emojis = ['😀', '😃', '😄', '😁', '😆', '😅', '😂', '🤣', '😊', '😇', '🙂', '🙃', '😉', '😌', '😍', '🥰'];
+const emojis = ['🐶', '🐱', '🐼', '🦁', '🍎', '🍌', '🏀', '⚽', '🚗', '🚀', '🎸', '🎨', '🌈', '🍔', '🍕', '🎂'];
 let selectedEmojis = emojis.slice(0, 8); // Use only 8 emojis for 16 cards
 selectedEmojis = [...selectedEmojis, ...selectedEmojis]; // Duplicate emojis for pairs
 selectedEmojis.sort(() => 0.5 - Math.random()); // Shuffle the emojis
