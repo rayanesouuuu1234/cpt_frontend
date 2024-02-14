@@ -93,10 +93,10 @@
     <div class="homepage">
         <h1>Welcome to the Flag Guessing Quiz</h1>
         <a href="#" class="button" onclick="startGame()">Play Game</a>
-        <a href="flag_list.html" class="button">List of Flags</a>
+        <a href="http://127.0.0.1:4000/tri2/2024/02/09/flaglist.html" class="button">List of Flags</a>
     </div>
 
-    <div id="quiz-container" style="display: none;">
+<div id="quiz-container" style="display: none;">
         <h1>Flag Guessing Quiz</h1>
         <div id="question"></div>
         <div class="blue-box">
@@ -106,7 +106,7 @@
         <div id="score">Score: <span id="current-score">0</span>/10</div>
     </div>
 
-    <div id="ending-screen">
+<div id="ending-screen">
         <div style="background-color: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 10px;">
             <h1>Quiz Finished!</h1>
             <div>Your total score is <span id="total-score"></span>/10</div>
@@ -114,7 +114,7 @@
         </div>
     </div>
 
-    <script>
+<script>
         let currentQuestionIndex = 0;
         let score = 0;
 
