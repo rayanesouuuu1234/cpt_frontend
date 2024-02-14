@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,10 +9,11 @@
       font-family: 'Arial', sans-serif;
       background-color: #f0f0f0;
       margin: 20px;
+      color: #000000; /* Set text color to black */ 
     }
     h1 {
       text-align: center;
-      color: #333;
+      color: #000000;
     }
     #instructions {
       margin-bottom: 20px;
@@ -47,7 +48,7 @@
       text-align: center;
       font-size: 18px;
       font-weight: bold;
-      color: #333;
+      color: #000000;
     }
   </style>
 </head>
