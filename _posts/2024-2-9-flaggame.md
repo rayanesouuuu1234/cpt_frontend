@@ -98,7 +98,7 @@
     <div class="homepage">
         <h1>Welcome to the Flag Guessing Quiz</h1>
         <a href="#" class="button" onclick="startGame()">Play Game</a>
-        <a href="http://127.0.0.1:4000/tri2/2024/02/09/flaglist.html" class="button">List of Flags</a>
+        <a href="https://rayanesouuuu1234.github.io/cpt_frontend/2024/02/09/flaglist.html" class="button">List of Flags</a>
     </div>
 
 <div id="quiz-container" style="display: none;">
