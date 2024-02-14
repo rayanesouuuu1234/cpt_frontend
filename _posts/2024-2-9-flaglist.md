@@ -29,7 +29,7 @@
             margin: 10px;
             width: 120px;
             padding: 5px;
-            background-color: #fff;
+            background-color: #000; /* Changed from #fff to #000 */
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
@@ -72,6 +72,14 @@
                         <div class="flag-name">${countryName}</div>
                     </div>
                 `;
+            });
+            // Sort flags alphabetically by country name
+            flags.sort((a, b) => {
+                const nameA = a.toLowerCase();
+                const nameB = b.toLowerCase();
+                if (nameA < nameB) return -1;
+                if (nameA > nameB) return 1;
+                return 0;
             });
             document.getElementById('flag-list').innerHTML = flags.join('');
         }
