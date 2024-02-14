@@ -29,10 +29,10 @@
 <div id="game" class="grid"></div>
 
 <script>
-const emojis = ['🐶', '🐱', '🐼', '🦁', '🍎', '🍌', '🏀', '⚽', '🚗', '🚀', '🎸', '🎨', '🌈', '🍔', '🍕', '🎂'];
-let selectedEmojis = emojis.slice(0, 8); // Use only 8 emojis for 16 cards
-selectedEmojis = [...selectedEmojis, ...selectedEmojis]; // Duplicate emojis for pairs
-selectedEmojis.sort(() => 0.5 - Math.random()); // Shuffle the emojis
+const emojis = ['🇦🇺', '🇧🇷', '🇨🇦', '🇩🇪', '🇫🇷', '🇬🇧', '🇮🇹', '🇯🇵', '🇰🇷', '🇲🇽', '🇳🇱', '🇷🇺' '🇸🇪', '🇺🇸', '🇿🇦', '🇨🇳'];
+let selectedEmojis = emojis.slice(0, 8); 
+selectedEmojis = [...selectedEmojis, ...selectedEmojis]; 
+selectedEmojis.sort(() => 0.5 - Math.random()); 
 
 const game = document.getElementById('game');
 let hasFlippedCard = false;

@@ -4,99 +4,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flag Guessing Quiz</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-image: url('https://imagecache.jpl.nasa.gov/images/edu/images/imagerecords/57000/57723/globe_west_2048-640x350.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            height: 100vh; 
-        }
-        .homepage {
-            max-width: 400px;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-        .homepage h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-        .button {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            background-color: #c3d7ff;
-            border: 2px solid blue;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #b0c5f5;
-        }
-        #quiz-container {
-            max-width: 600px;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8); 
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-        }
-        h1 {
-            color: #333;
-        }
-        #question {
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-        .option {
-            display: inline-block;
-            margin: 5px;
-            padding: 10px 20px;
-            background-color: #c3d7ff; 
-            border: 2px solid blue;
-            cursor: pointer;
-        }
-        .option:hover {
-            background-color: #b0c5f5;
-        }
-        #score {
-            margin-top: 20px;
-            font-size: 18px;
-            color: #666;
-        }
-        .blue-box {
-            padding: 10px;
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-        #ending-screen {
-            display: none; 
-            background-color: rgba(255, 255, 255, 0.8); 
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 400px; 
-        }
-    </style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-image: url('https://imagecache.jpl.nasa.gov/images/edu/images/imagerecords/57000/57723/globe_west_2048-640x350.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        height: 100vh; 
+    }
+    .homepage {
+        max-width: 400px;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.8); /* Changed background color to a darker shade */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        color: #ccc; /* Changed font color to a lighter shade */
+    }
+    .homepage h1 {
+        color: #ccc; /* Changed font color to a lighter shade */
+        margin-bottom: 20px;
+    }
+    .button {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px 20px;
+        background-color: #c3d7ff;
+        border: 2px solid blue;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+    .button:hover {
+        background-color: #b0c5f5;
+    }
+    #quiz-container {
+        max-width: 600px;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.8); /* Changed background color to a darker shade */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        color: #ccc; /* Changed font color to a lighter shade */
+    }
+    h1 {
+        color: #ccc; /* Changed font color to a lighter shade */
+    }
+    #question {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .option {
+        display: inline-block;
+        margin: 5px;
+        padding: 10px 20px;
+        background-color: #c3d7ff; 
+        border: 2px solid blue;
+        cursor: pointer;
+        color: #333; /* Changed font color to a darker shade */
+    }
+    .option:hover {
+        background-color: #b0c5f5;
+    }
+    #score {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #ccc; /* Changed font color to a lighter shade */
+    }
+    .blue-box {
+        padding: 10px;
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+    #ending-screen {
+        display: none; 
+        background-color: rgba(0, 0, 0, 0.8); /* Changed background color to a darker shade */
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 400px; 
+        color: #ccc; /* Changed font color to a lighter shade */
+    }
+</style>
+
 </head>
 <body>
     <div class="homepage">
         <h1>Welcome to the Flag Guessing Quiz</h1>
         <a href="#" class="button" onclick="startGame()">Play Game</a>
-        <a href="flag_list.html" class="button">List of Flags</a>
+        <a href="http://127.0.0.1:4000/tri2/2024/02/09/flaglist.html" class="button">List of Flags</a>
     </div>
 
-    <div id="quiz-container" style="display: none;">
+<div id="quiz-container" style="display: none;">
         <h1>Flag Guessing Quiz</h1>
         <div id="question"></div>
         <div class="blue-box">
@@ -106,7 +111,7 @@
         <div id="score">Score: <span id="current-score">0</span>/10</div>
     </div>
 
-    <div id="ending-screen">
+<div id="ending-screen">
         <div style="background-color: rgba(255, 255, 255, 0.8); padding: 20px; border-radius: 10px;">
             <h1>Quiz Finished!</h1>
             <div>Your total score is <span id="total-score"></span>/10</div>
@@ -114,7 +119,7 @@
         </div>
     </div>
 
-    <script>
+<script>
         let currentQuestionIndex = 0;
         let score = 0;
 
